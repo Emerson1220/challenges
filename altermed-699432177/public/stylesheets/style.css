@@ -1,0 +1,63 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+#jumby {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#jumbo-header {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+  background-image: url("https://images.unsplash.com/photo-1507431489734-ef0dbfbf88e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+#allcards {
+  margin: 40px;
+}
+
+.medcard {
+  margin-bottom: 40px;
+}
+
+.medcardimg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.medcardbody {
+  min-height: 180px;
+}
+
+.medcardtitle {
+  color: #128396;
+  font-weight: 300;
+}

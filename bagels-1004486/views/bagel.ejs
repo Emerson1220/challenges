@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-dark bg-white">
+        <span>Bagels</span>
+        <a class="navbar-brand" href="/"><button type="button" class="btn btn-primary">Retour</button></a>
+      </nav>
+    </div>
+
+    <div class="card-group">
+
+      <% for(var i=0; Bagels.length>i; i++){ %>
+        <div class="card">
+          <img class="card-img-top" src="images/<%=Bagels[i].images%>.jpg">
+          <div class="card-body">
+            <h5 class="card-title"><%=Bagels[i].title%></h5>
+            <p class="card-text t"><%=Bagels[i].description%></p>
+          </div>
+        </div>
+      <% } %>
+
+    </div>
+
+  </body>
+</html>

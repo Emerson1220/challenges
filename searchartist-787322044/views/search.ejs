@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Artist</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Search Artist</h1>
+    <form action="/search" method="POST">
+      <input type="text" name="artist" />
+      <input type="submit" value="Rechercher" />
+    </form>
+
+    <% if (artist) { %>
+      <p>Artiste : <%= artist.artist %></p>
+      <p>Favorite musics :</p>
+      <ul>
+        <% for(var i = 0; i < artist.favorite_musics.length; i++) { %>
+          <li><%= artist.favorite_musics[i] %></li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <p>Artist not found</p>
+    <% } %>
+  </body>
+</html>

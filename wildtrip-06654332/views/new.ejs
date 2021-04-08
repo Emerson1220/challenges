@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wild Trips</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+<!-- 16) CHANGEMENT DU ACTIVE SUR LA NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Wild Trips</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/trips">Trips</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/new">New<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container container_display text-center">
+  <h2>Add a new trip</h2>
+
+  <% if(errorMsg){ %>
+    <h4 style="color:red">Désolé, ce trip existe déjà...</h4>
+  <% } %>
+
+    <form action="/new" method="POST">
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Choisissez le nom du trip</label>
+        <select name="city" class="form-control" id="exampleFormControlSelect1">
+          <option value="Paris">Paris</option>
+          <option value="Panama">Panama</option>
+          <option value="Bora-Bora">Bora-Bora</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Entrer une description appropriée pour le voyage sélectionné</label>
+        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <input type="submit" value="Valider" class="btn btn-primary"/>
+
+    </form>
+
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
